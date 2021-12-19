@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Navigation Menu</title>
+
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons+Round">
+        <link rel="stylesheet" type="text/css" href="css/navBar.css">
+    </head>
+    <body>
+        <div class="navigation">
+            <ul>
+                <li class="list active">
+                    <a href="#" >
+                        <span class="material-icons-round icon">
+                            home
+                        </span>
+                        <span class="text">Home</span>
+                    </a>
+                </li>
+                <li class="list">
+                    <a href="#" >
+                        <span class="material-icons-round icon">
+                            person
+                        </span>
+                        <span class="text">Profile</span>
+                    </a>
+                </li>
+                <li class="list">
+                    <a href="#" >
+                        <span class="material-icons-round icon">
+                            chat
+                        </span>
+                        <span class="text">Messages</span>
+                    </a>
+                </li>
+                <li class="list">
+                    <a href="#" >
+                        <span class="material-icons-round icon">
+                            photo_camera
+                        </span>                            
+                        <span class="text">Photos</span>
+                    </a>
+                </li>
+                <li class="list">
+                    <a href="#" >
+                        <span class="material-icons-round icon">
+                            settings
+                        </span>                            
+                        <span class="text">Settings</span>
+                    </a>
+                </li>
+                <div class="indicator"></div>
+            </ul>
+        </div>
+        <script>
+            const list = document.querySelectorAll('.list');
+            function activeLink(){
+                list.forEach((item) =>
+                item.classList.remove('active'));
+                this.classList.add('active');
+            }
+            list.forEach((item) => 
+            item.addEventListener('click', activeLink))
+        </script>
+    </body>
+</html>
